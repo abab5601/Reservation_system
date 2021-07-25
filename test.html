@@ -20,16 +20,19 @@
 			url: "https://script.google.com/macros/s/AKfycbxa-opIfGUszxHf6VPlddFBGr05GthmGCJpi3JkRHg/dev" // 填入網路應用程式網址
 		});
 		*/
-		
+
 		$.ajax({
+
 			type: "get",
+			headers: {'Access-Control-Allow-Origin':'*' },
+			dataType:"jsonp",
 			url: "https://script.google.com/macros/s/AKfycbxa-opIfGUszxHf6VPlddFBGr05GthmGCJpi3JkRHg/dev",
-            		success: function(jsondata){
-             			   console.log(jsondata);
-   }		
-			
+			success: function (jsondata) {
+				console.log(jsondata);
+			}
+
 		});
-		
+
 	</script>
 </head>
 
@@ -55,16 +58,16 @@
 				console.log(request);
 			});
 		}
-		console.log('test22')
-		var request = gapi.client.request({
-			'method': 'GET',
-			'path': '/drive/v3/about',
-			'params': { 'fields': 'user' }
-		});
-		// Execute the API request.
-		request.execute(function (response) {
-			console.log(response);
-		});
+		// console.log('test22')
+		// var request = gapi.client.request({
+		// 	'method': 'GET',
+		// 	'path': '/drive/v3/about',
+		// 	'params': { 'fields': 'user' }
+		// });
+		// // Execute the API request.
+		// request.execute(function (response) {
+		// 	console.log(response);
+		// });
 
 	</script>
 	<button id="login-button" disabled>Login with Google</button>
