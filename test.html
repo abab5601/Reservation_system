@@ -24,8 +24,8 @@
 		$.ajax({
 
 			type: "get",
-			headers: {'Access-Control-Allow-Origin':'*' },
-			dataType:"application/json",
+			headers: { 'Access-Control-Allow-Origin': '*' },
+			dataType: "application/json",
 			url: "https://script.google.com/macros/s/AKfycbxa-opIfGUszxHf6VPlddFBGr05GthmGCJpi3JkRHg/dev",
 			success: function (jsondata) {
 				console.log(jsondata);
@@ -40,6 +40,7 @@
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<script>
 		function onSignIn(googleUser) {
+
 			var profile = googleUser.getBasicProfile();
 			console.log("test2")
 			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -49,7 +50,20 @@
 			var id_token = googleUser.getAuthResponse().id_token;
 			console.log("ID Token: " + id_token);
 			console.log('test11')
+			var test = gapi.client.request({
+				path: "https://script.google.com/macros/s/AKfycbwG0we5gamMLgBmve5cZX8jt1IElLwN1FCENNq-j5hoxZ0dZCaenNPbW-INs6tP_jKA/exec",
+				method: "get",
+				params: {}
+			})
+			test.execute(function (response) {
+				console.log(request);
+			});
+
+
 		}
+
+
+
 		// console.log('test22')
 		// var request = gapi.client.request({
 		// 	'method': 'GET',
@@ -63,7 +77,6 @@
 
 	</script>
 	<button id="login-button" disabled>Login with Google</button>
-	<h1>12331131322</h1>
 </body>
 
 </html>
