@@ -37,11 +37,12 @@
     $("#getDifferentDomainDataViaJsonp").click(function(){
  
         var options = {
+            method:"Societies_list_Get",
             tags: "mount rainier",
             tagmode: "any",
             format: "json"
         };
-        ajaxCallJsonp("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",options);
+        ajaxCallJsonp("https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec",options);
     });
  
 function ajaxCallJsonp(target,options){
@@ -55,7 +56,7 @@ function ajaxCallJsonp(target,options){
     data.success(function( msg ) {
  
         //flickr data
-        if(target=="http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"){
+        if(target=="https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec"){
             $.each(msg.items, function(i,item){
  
               $("#result").append($("<img/>").attr("src", item.media.m));
