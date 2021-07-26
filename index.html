@@ -53,13 +53,14 @@
 					}
 				});*/
 		$.ajax({
-			type: "Get",
+			type: "POST",
 			crossDomain: true,
 			headers: {
 				"Access-Control-Allow-Origin": "*",
 			},
 			contentType:"text/plain; charset=utf-8",
-			url: "https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec?method=Societies_list_Get", //填入網路應用程式網址
+			dataType:"text",
+			url: "https://script.google.com/macros/s/AKfycbw4EDzIndq5FL3ZD9HIzkBaYWVRLrX7UVA8c_aOohKJaE1eDMv94I1OLYBCbSL7Fxcv/exec", //填入網路應用程式網址
 			success: function (e) {
 				console.log(e);
 			}
