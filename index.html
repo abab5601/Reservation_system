@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<h1>Hello, world!5</h1>
+	<h1>Hello, world!</h1>
 	<div class="btn-group">
 		<button name="test" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
 			aria-haspopup="true" aria-expanded="false">
@@ -33,34 +33,18 @@
 		</div>
 	</div>
 	<script>
-		/*
-				$.ajax({
-					type: "post",
-					crossDomain: true,
-					headers: {
-		
-						"Access-Control-Allow-Origin": "abab5601.github.io",
-		
-					},
-					dataType: "text/html",
-					data: {
-						"method": "Societies_list_Get",
-						"query": "Mary"
-					},
-					url: "https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec", //填入網路應用程式網址
-					success: function (e) {
-						console.log(e);
-					}
-				});*/
-		$.ajax({
-			type: "POST",
-			data:{"method":"Societies_list_Get"},
-			url: "https://script.google.com/macros/s/AKfycby-qQYR_q2qcwo-mB5hVVZLtSKnThxmbRGJ8UksRkM2qoGRibW9Bfv4QkhROtw_4X_b/exec", //填入網路應用程式網址
+
+		$.ajax({ 
+			type: "post",
+			data: {
+				"method": "Societies_list_Get",
+				"query": "Mary"
+			},
+			url: "https://script.google.com/macros/s/AKfycbxa-opIfGUszxHf6VPlddFBGr05GthmGCJpi3JkRHg/dev", //填入網路應用程式網址
 			success: function (e) {
 				console.log(e);
 			}
 		});
-
 
 	</script>
 	<!--	引入 Bootstrap-->
