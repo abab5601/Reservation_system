@@ -1,9 +1,96 @@
-<HTML>
-    <HEAD>
-    <TITLE>Moved Temporarily</TITLE>
-    </HEAD>
-    <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
-    <H1>Moved Temporarily</H1>
-    The document has moved <A HREF="https://script.googleusercontent.com/macros/echo?user_content_key=_4nVSsWiOOuQ0qF75guSsVz5gPGQYm8grrUGi4_iUsQKit-EQ9lQdXJrx3RUDMyUjwysV4X5vrYyrUnF-XnwqzOEN11zedpwm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHdnXbQwoCRSrEpY21QMtmJm4tKAe21CpDsFQb8jlwUygXdsNz0OqUnidXmKIhI7i8Y77JCOkOy5-m7Nxx70nLAiVN5tuas5MA&amp;lib=MMuRurLvIHZY6iA27huEBZ4h4jLTfeP9t">here</A>.
-    </BODY>
-    </HTML>
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>社團教室預約系統</title>
+	<!--引入 Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="./css/main.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+</head>
+
+<body>
+	<h1>Hello, world!2</h1>
+	<div class="btn-group">
+		<button name="test" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+			aria-haspopup="true" aria-expanded="false">
+			Large button
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">社團一</a>
+			<a class="dropdown-item active" href="#">社團二</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">社團三</a>
+		</div>
+	</div>
+	<script>
+//從不同的 domain 拿資料 ( Server 端需使用 jsonp 格式)
+    $("#getDifferentDomainDataViaJsonp").click(function(){
+ 
+        var options = {
+            tags: "mount rainier",
+            tagmode: "any",
+            format: "json"
+        };
+        ajaxCallJsonp("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",options);
+    });
+ 
+function ajaxCallJsonp(target,options){
+ 
+    var data = $.getJSON(target,options);
+ 
+    //empty content
+    $("#result").html("");
+ 
+    //成功得到資料
+    data.success(function( msg ) {
+ 
+        //flickr data
+        if(target=="http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"){
+            $.each(msg.items, function(i,item){
+ 
+              $("#result").append($("<img/>").attr("src", item.media.m));
+              if ( i == 3 ) {
+                return false;
+              }
+ 
+            });
+        }
+        //my data
+        else if(target=="http://design2u.me/example/jsonp/index.php?callback=?"){
+            $("#result").html('Your name is '+msg.fullname);
+        }
+        //other
+        else{
+            $("#result").html("取得資料成功，但未得到被定義的資料");
+        }
+ 
+    });
+ 
+    //取得資料失敗
+    data.error(function( msg ) {
+        $("#result").html("fail getting data");
+    });
+ 
+}
+</script>
+<!--	引入 Bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="./js/index.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
