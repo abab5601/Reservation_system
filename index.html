@@ -54,12 +54,6 @@
 				});*/
 		$.ajax({
 			type: "POST",
-			crossDomain: true,
-			headers: {
-				"Access-Control-Allow-Origin": "*",
-			},
-			contentType:"text/plain; charset=utf-8",
-			dataType:"text",
 			data:{"method":"Societies_list_Get"},
 			url: "https://script.google.com/macros/s/AKfycbxQU6VRSA7bqEQLjfliVk9We7QDaB369f8KeGHYGD0EhM8LeOwWMhBdnsEkYYLQsmyZ/exec", //填入網路應用程式網址
 			success: function (e) {
