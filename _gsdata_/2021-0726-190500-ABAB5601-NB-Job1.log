@@ -1,0 +1,6 @@
+2021-07-26 19:05:00: -- 分析開始 User Command
+2021-07-26 19:05:00: 左側: State file does not exist: C:/Reservation_system/web/_gsdata_/_file_state_v4._gs
+2021-07-26 19:05:00: 右側: State file does not exist: C:/xampp/htdocs/_gsdata_/_file_state_v4._gs
+2021-07-26 19:05:00: 變更：14， 衝突：0， 複製時間：0， 複製狀態：944， 錯誤： 0, All: 960
+2021-07-26 19:05:00: Left to Right: Delete File: 14 
+2021-07-26 19:05:00: -- 分析已結束。歷時 00:00:00, 速度： Many 文件/秒
