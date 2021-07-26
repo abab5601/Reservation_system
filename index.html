@@ -33,9 +33,27 @@
 		</div>
 	</div>
 	<script>
-
+		/*
+				$.ajax({
+					type: "post",
+					crossDomain: true,
+					headers: {
+		
+						"Access-Control-Allow-Origin": "abab5601.github.io",
+		
+					},
+					dataType: "text/html",
+					data: {
+						"method": "Societies_list_Get",
+						"query": "Mary"
+					},
+					url: "https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec", //填入網路應用程式網址
+					success: function (e) {
+						console.log(e);
+					}
+				});*/
 		$.ajax({
-			type: "post",
+			type: "Get",
 			crossDomain: true,
 			headers: {
 
@@ -43,10 +61,6 @@
 
 			},
 			dataType: "text/html",
-			data: {
-				"method": "Societies_list_Get",
-				"query": "Mary"
-			},
 			url: "https://script.google.com/macros/s/AKfycbx57Zr6CJQsmeYBFSx-uxHjKT49Egu9i15dTL9QLAFZMFG7BG35axBrf3MoZMZrt2C1/exec", //填入網路應用程式網址
 			success: function (e) {
 				console.log(e);
