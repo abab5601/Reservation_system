@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<h1>Hello, world!2</h1>
+	<h1>Hello, world!</h1>
 	<div class="btn-group">
 		<button name="test" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
 			aria-haspopup="true" aria-expanded="false">
@@ -39,8 +39,10 @@
 			crossDomain: true,
 			headers: {
 
-				"Access-Control-Allow-Origin": "*"
+				"Access-Control-Allow-Origin": "*",
+
 			},
+			dataType: "text/html",
 			data: {
 				"method": "Societies_list_Get",
 				"query": "Mary"
