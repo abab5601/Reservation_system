@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<div id="LoadingBar">正在載入，請稍候……</div>
+<script>
+	//正在載入中
+	window.onload = function () {
+		var objLoading = document.getElementById("LoadingBar");
+		if (objLoading != null) {
+			objLoading.style.display = "none";
+		}
+	};
+</script>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>社團教室預約系統</title>
+	<!--引入 Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="./css/main.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+</head>
+
+<body>
+	<h1>Hello, world!20</h1>
+	<div>
+		<div class="btn-group" id="Society_list">
+			<h1>選擇社團：</h1>
+			<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				點擊選擇社團
+			</button>
+			<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+				<a class="dropdown-item" href="javascript:;">社團列表載入中</a>
+
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<div class="btn-group" id="class_list">
+			<h1>選擇教室：</h1>
+			<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				請先選擇社團
+			</button>
+			<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+				
+
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="btn-group" id="time_list">
+			<h1>選擇時間：</h1>
+			<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				請先選擇社團
+			</button>
+			<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+				
+
+			</div>
+		</div>
+	</div>
+	</div>
+	<!--	引入 Bootstrap-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script src="./js/index.js" crossorigin="anonymous"></script>
+
+
+	<script>/*
+   $('Society_list').on('hide.bs.dropdown', () => {
+//選中
+   });
+   $('#Society_list').on('shown.bs.dropdown', () => {
+	   //顯示
+   });*/
+		
+	</script>
+</body>
+
+</html>
